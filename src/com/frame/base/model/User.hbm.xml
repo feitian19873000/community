@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-9-22 15:22:57 by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.frame.base.model.User" table="user" catalog="community">
+        <id name="id" type="string">
+            <column name="id" length="36" />
+            <generator class="assigned" />
+        </id>
+        <property name="userTypeid" type="string">
+            <column name="user_typeid" length="36">
+                <comment>用户组</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="50" unique="true">
+                <comment>姓名</comment>
+            </column>
+        </property>
+        <property name="alias" type="string">
+            <column name="alias" length="50">
+                <comment>昵称，别名</comment>
+            </column>
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="50">
+                <comment>密码</comment>
+            </column>
+        </property>
+        <property name="sex" type="string">
+            <column name="sex" length="2">
+                <comment>性别,0-男，1-女</comment>
+            </column>
+        </property>
+        <property name="idNumber" type="string">
+            <column name="id_number" length="36">
+                <comment>身份证号</comment>
+            </column>
+        </property>
+        <property name="birthday" type="timestamp">
+            <column name="birthday" length="19">
+                <comment>出生日期</comment>
+            </column>
+        </property>
+        <property name="tel" type="string">
+            <column name="tel" length="20">
+                <comment>电话</comment>
+            </column>
+        </property>
+        <property name="fax" type="string">
+            <column name="fax" length="20">
+                <comment>传真</comment>
+            </column>
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50">
+                <comment>邮箱</comment>
+            </column>
+        </property>
+        <property name="qq" type="string">
+            <column name="qq" length="36">
+                <comment>QQ</comment>
+            </column>
+        </property>
+        <property name="address" type="string">
+            <column name="address">
+                <comment>地址</comment>
+            </column>
+        </property>
+        <property name="registerTime" type="timestamp">
+            <column name="register_time" length="19">
+                <comment>用户注册系统时间</comment>
+            </column>
+        </property>
+        <property name="expireTime" type="timestamp">
+            <column name="expire_time" length="19">
+                <comment>用户注销账号时间</comment>
+            </column>
+        </property>
+        <property name="loginTime" type="timestamp">
+            <column name="login_time" length="19">
+                <comment>用户最近登录时间</comment>
+            </column>
+        </property>
+        <property name="loginIp" type="string">
+            <column name="login_ip" length="50">
+                <comment>用户最近登录IP</comment>
+            </column>
+        </property>
+        <property name="flagActive" type="string">
+            <column name="flag_active" length="2">
+                <comment>用户是否激活,1-是，0-否</comment>
+            </column>
+        </property>
+        <property name="flagApproved" type="string">
+            <column name="flag_approved" length="2">
+                <comment>用户是否得到系统许可发布信息，1-是，0-否</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="remark">
+                <comment>备注</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+
+一.系统框架
+运用spring3.1+hibernate4.2框架。运用spring mvc，完全注解的方式
+二.项目文件结构
+----cfg(配置文件)
+-----app_base.xml(spring结合hibernate配置文件)
+-----jdbc.properties(数据库驱动属性)
+-----log4j.properties(日志文件)
+----com		
+-----frame(系统功能业务实现模块) 
+-----util(系统公用工具包)
+----struts.xml(struts配置文件)
+
+----WebContent
+-----frame
+-----resources(资源文件)
+------js(js文件存放位置)
+------css(css文件存放位置)
+------WEB-INF
+-------web.xml
+------index.xml(系统页面显示入口)
+
+1.采用annotation对spring-mvc进行登录权限控制
+http://my.oschina.net/kingfire/blog/99992
+2.异常处理类型
+http://haohaoxuexi.iteye.com/blog/1188161
+      
